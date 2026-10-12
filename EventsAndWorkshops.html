@@ -1,0 +1,391 @@
+<!doctype html>
+<!-- Roast House workshops with private, browser-only registration review forms. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Explore the craft of coffee through Roast House's guided workshops, origin tastings, and conversations with the roaster."
+    >
+    <title>Gather with us | Roast House</title>
+    <link rel="icon" type="image/jpeg" href="image/roast-house-logo.jpg" >
+    <link rel="stylesheet" href="style.css" >
+    <script src="jsscript/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="announcement-bar">Origin. Technique. Conversation.</div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Roast House home">
+          <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+          <span>Roast House<small>COFFEE, BEAUTIFULLY CONSIDERED.</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="CoffeeSelection.html">Our coffee</a>
+          <a href="BrewingEquipment.html">Brew tools</a>
+          <a href="EventsAndWorkshops.html" aria-current="page">Gather with us</a>
+          <a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a>
+          <a class="bag-link" href="ShoppingCart.html"
+            >Bag <span class="bag-count" data-cart-count>0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero container page-hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">The craft, shared</p>
+          <h1 id="page-title">Coffee, <em>in good company.</em></h1>
+          <p class="hero-description">
+            Discover the detail behind an exceptional cup. Our fictional woman-owned coffee house
+            presents guided brewing sessions, comparative tastings and conversations with the roaster.
+            No previous experience is required.
+          </p>
+          <p class="demo-note" id="workshop-demo">
+            Prototype only: these are sample events, not real bookings. Try made-up details below;
+            nothing is sent or stored, and no seat is reserved.
+          </p>
+          <noscript
+            ><p class="demo-note">JavaScript is needed for these local demos. Submit buttons remain disabled without it; no details will be submitted.</p></noscript
+          >
+          <div class="button-row">
+            <a class="button" href="#workshops"
+              >Explore workshops <span aria-hidden="true">&#8595;</span></a
+            >
+            <a class="text-link" href="CoffeeSelection.html"
+              >Explore our coffee <span aria-hidden="true">&#8599;</span></a
+            >
+          </div>
+          <ul class="page-hero-facts" aria-label="Workshop details">
+            <li>Beginner friendly</li>
+            <li>Brewing &amp; tastings</li>
+            <li>Sample events</li>
+          </ul>
+        </div>
+        <figure class="page-hero-visual">
+          <img
+            class="page-hero-photo"
+            src="image/coffee-classes.jpg"
+            alt="People talking around tables in a busy cafe"
+            width="1280"
+            height="960"
+            fetchpriority="high"
+          >
+          <img
+            class="page-hero-detail"
+            src="image/beans-and-cup.jpg"
+            alt="Black coffee in a white cup and saucer"
+            width="1600"
+            height="1200"
+            decoding="async"
+          >
+          <figcaption class="page-hero-caption">
+            <span>Learn. Taste. Connect.</span>
+            <strong>Good coffee, shared.</strong>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="workshops"
+        class="container section"
+        aria-labelledby="workshops-title"
+        tabindex="-1"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A considered programme</p>
+            <h2 id="workshops-title">Upcoming sample workshops</h2>
+          </div>
+          <p class="muted">Illustrative USD prices · All times are local to the fictional boutique.</p>
+        </div>
+        <div class="card-grid workshop-grid">
+          <article class="card workshop-card" aria-labelledby="pour-title">
+            <p class="pill">Beginner friendly · 8 participants</p>
+            <h3 id="pour-title">Pour-over &amp; slow mornings</h3>
+            <p><time datetime="2026-11-14T10:00">14 November 2026 · 10:00–11:30 am</time></p>
+            <p class="muted">The Roast House brew bar · In-person workshop</p>
+            <p>
+              Refine your brewing technique with a practical introduction to grind size,
+              water temperature and controlled pouring.
+            </p>
+            <ul class="feature-list">
+              <li>Compare two coffees and their tasting notes.</li>
+              <li>Practice a simple pour-over recipe.</li>
+              <li>Brewing equipment and beans included.</li>
+            </ul>
+            <p class="price">$24 <span>/ person</span></p>
+            <form
+              id="pour-form"
+              class="signup-form"
+              data-demo-form="workshop"
+              data-workshop="Pour-over &amp; slow mornings"
+              aria-labelledby="pour-title pour-form-title"
+              aria-describedby="workshop-demo"
+            >
+              <h4 id="pour-form-title">Your registration details</h4>
+              <p class="muted">All fields are required.</p>
+              <div class="form-field">
+                <label for="pour-first">First name</label>
+                <input
+                  id="pour-first"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                  maxlength="100"
+                  data-label="first name"
+                  aria-describedby="pour-first-error"
+                >
+                <p id="pour-first-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="pour-last">Last name</label>
+                <input
+                  id="pour-last"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                  maxlength="100"
+                  data-label="last name"
+                  aria-describedby="pour-last-error"
+                >
+                <p id="pour-last-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="pour-email">Email address</label>
+                <input
+                  id="pour-email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                  data-label="email address"
+                  aria-describedby="pour-email-error"
+                >
+                <p id="pour-email-error" class="field-error"></p>
+              </div>
+              <button class="button" type="submit" disabled>Review pour-over registration</button>
+              <p
+                id="pour-status"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                tabindex="-1"
+              ></p>
+            </form>
+          </article>
+
+          <article class="card workshop-card" aria-labelledby="roaster-title">
+            <p class="pill">A conversation with the roaster · 6 participants</p>
+            <h3 id="roaster-title">Meet the roaster</h3>
+            <p><time datetime="2026-12-12T14:00">12 December 2026 · 2:00–3:30 pm</time></p>
+            <p class="muted">The Roast House brew bar · In-person gathering</p>
+            <p>
+              Join Bea and our guest roaster to explore how origin, processing and roast
+              development shape the character of a coffee.
+            </p>
+            <ul class="feature-list">
+              <li>Discover how roast levels change aroma and flavour.</li>
+              <li>Compare a light roast and a medium roast.</li>
+              <li>Ask questions about origins, freshness, and storing beans.</li>
+            </ul>
+            <p class="price">$32 <span>/ person</span></p>
+            <form
+              id="roaster-form"
+              class="signup-form"
+              data-demo-form="workshop"
+              data-workshop="Meet the roaster"
+              aria-labelledby="roaster-title roaster-form-title"
+              aria-describedby="workshop-demo"
+            >
+              <h4 id="roaster-form-title">Your registration details</h4>
+              <p class="muted">All fields are required.</p>
+              <div class="form-field">
+                <label for="roaster-first">First name</label>
+                <input
+                  id="roaster-first"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                  maxlength="100"
+                  data-label="first name"
+                  aria-describedby="roaster-first-error"
+                >
+                <p id="roaster-first-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="roaster-last">Last name</label>
+                <input
+                  id="roaster-last"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                  maxlength="100"
+                  data-label="last name"
+                  aria-describedby="roaster-last-error"
+                >
+                <p id="roaster-last-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="roaster-email">Email address</label>
+                <input
+                  id="roaster-email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                  data-label="email address"
+                  aria-describedby="roaster-email-error"
+                >
+                <p id="roaster-email-error" class="field-error"></p>
+              </div>
+              <button class="button" type="submit" disabled>Review roaster registration</button>
+              <p
+                id="roaster-status"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                tabindex="-1"
+              ></p>
+            </form>
+          </article>
+
+          <article class="card workshop-card" aria-labelledby="tasting-title">
+            <p class="pill">An introduction to tasting · 10 participants</p>
+            <h3 id="tasting-title">New year, new favourite</h3>
+            <p><time datetime="2027-01-16T11:00">16 January 2027 · 11:00 am–12:00 pm</time></p>
+            <p class="muted">The Roast House tasting table · In-person tasting</p>
+            <p>
+              Explore a flight of three origins, from chocolate and fruit to delicate floral notes.
+              Develop your palate through a guided comparison of flavour, texture and finish.
+            </p>
+            <ul class="feature-list">
+              <li>A guided tasting of three coffee origins.</li>
+              <li>Learn the basics of aroma, acidity and body.</li>
+              <li>A simple tasting-notes exercise to try at home.</li>
+            </ul>
+            <p class="price">$18 <span>/ person</span></p>
+            <form
+              id="tasting-form"
+              class="signup-form"
+              data-demo-form="workshop"
+              data-workshop="New year, new favourite"
+              aria-labelledby="tasting-title tasting-form-title"
+              aria-describedby="workshop-demo"
+            >
+              <h4 id="tasting-form-title">Your registration details</h4>
+              <p class="muted">All fields are required.</p>
+              <div class="form-field">
+                <label for="tasting-first">First name</label>
+                <input
+                  id="tasting-first"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                  maxlength="100"
+                  data-label="first name"
+                  aria-describedby="tasting-first-error"
+                >
+                <p id="tasting-first-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="tasting-last">Last name</label>
+                <input
+                  id="tasting-last"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                  maxlength="100"
+                  data-label="last name"
+                  aria-describedby="tasting-last-error"
+                >
+                <p id="tasting-last-error" class="field-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="tasting-email">Email address</label>
+                <input
+                  id="tasting-email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                  data-label="email address"
+                  aria-describedby="tasting-email-error"
+                >
+                <p id="tasting-email-error" class="field-error"></p>
+              </div>
+              <button class="button" type="submit" disabled>Review tasting registration</button>
+              <p
+                id="tasting-status"
+                class="status-message"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                tabindex="-1"
+              ></p>
+            </form>
+          </article>
+        </div>
+      </section>
+      <section class="container section split-section" aria-labelledby="welcome-title">
+        <div>
+          <p class="eyebrow">An open invitation</p>
+          <h2 id="welcome-title">Knowledge, without the ceremony.</h2>
+        </div>
+        <div class="prose">
+          <p>
+            These sample sessions are designed for thoughtful learning at your own pace.
+            The proposed programme includes all brewing equipment and tasting materials.
+          </p>
+          <p>Explore the principles of good coffee, then bring a more considered approach to your daily ritual.</p>
+          <a class="button button-secondary" href="BrewingEquipment.html">Meet the brew tools</a>
+        </div>
+      </section>
+    </main>
+    <p class="container image-credit">
+      Photography and original artwork.
+      <a href="ImageCredits.html">Image credits &amp; licenses</a>
+    </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+            <span>Roast House<small>COFFEE, BEAUTIFULLY CONSIDERED.</small></span>
+          </a>
+          <p>Exceptional coffee. An everyday art.</p>
+        </div>
+        <div>
+          <h2>The collections</h2>
+          <a href="CoffeeSelection.html">Our coffee</a><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="ShoppingCart.html">Your bag</a>
+        </div>
+        <div>
+          <h2>The house</h2>
+          <a href="EventsAndWorkshops.html">Events &amp; workshops</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a href="index.html#our-story">Our philosophy</a
+          ><a href="index.html#find-us">Find us in Yangon</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Roast House · A fictional woman-owned coffee house.</p>
+        <p class="demo-note">Educational demo only. Illustrative USD prices; no bookings, orders or payments are processed.</p>
+      </div>
+    </footer>
+  </body>
+</html>

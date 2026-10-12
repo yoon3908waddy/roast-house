@@ -1,0 +1,194 @@
+<!doctype html>
+<!-- Shopping bag with editable quantities and a local order-review flow. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Review your Roast House collection, adjust quantities, and apply your welcome offer."
+    >
+    <title>Your Bag | Roast House</title>
+    <link rel="icon" type="image/jpeg" href="image/roast-house-logo.jpg" >
+    <link rel="stylesheet" href="style.css" >
+    <script src="jsscript/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="announcement-bar">
+      Your considered collection. <span aria-hidden="true">—</span> Good mornings begin here.
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Roast House home">
+          <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+          <span>Roast House<small>Coffee, beautifully considered.</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="CoffeeSelection.html">Our coffee</a
+          ><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="EventsAndWorkshops.html">Gather with us</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a class="bag-link" href="ShoppingCart.html" aria-current="page"
+            >Bag <span class="bag-count" data-cart-count>0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-intro container">
+        <p class="eyebrow">Selected with intention</p>
+        <h1>Your <em>collection.</em></h1>
+        <p>Review the details of your next coffee ritual.</p>
+      </section>
+      <section class="container cart-section" aria-label="Shopping bag">
+        <div id="order-confirmation" class="confirmation-panel" tabindex="-1" hidden>
+          <img class="dialog-logo" src="image/roast-house-logo.jpg" alt="" width="64" height="64" >
+          <h2>Your collection has been reviewed.</h2>
+          <p id="confirmation-detail"></p>
+          <p>
+            Your bag has been cleared. Online checkout is not yet available, so no order or payment
+            was processed.
+          </p>
+          <a class="button" href="CoffeeSelection.html"
+            >Continue exploring <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div id="empty-cart" class="empty-state" hidden>
+          <img class="dialog-logo" src="image/roast-house-logo.jpg" alt="" width="64" height="64" >
+          <h2>Your collection begins here.</h2>
+          <p>Discover distinctive coffee and considered equipment to add to your bag.</p>
+          <a class="button" href="CoffeeSelection.html"
+            >Explore our coffee <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div id="cart-content" class="cart-layout" hidden>
+          <div>
+            <div class="cart-heading">
+              <h2>Your selection</h2>
+              <button id="clear-cart" class="text-button" type="button">Empty bag</button>
+            </div>
+            <div id="cart-items"></div>
+            <a class="text-link" href="CoffeeSelection.html"
+              ><span aria-hidden="true">←</span> Back to the collection</a
+            >
+          </div>
+          <aside class="order-summary" aria-labelledby="summary-title">
+            <p class="eyebrow">Considered to the last detail</p>
+            <h2 id="summary-title">Order summary</h2>
+            <dl class="totals-list" aria-live="polite">
+              <div>
+                <dt>Subtotal</dt>
+                <dd id="cart-subtotal">$0.00</dd>
+              </div>
+              <div id="discount-row" hidden>
+                <dt>FIRSTSIP · 10% off</dt>
+                <dd id="cart-discount">$0.00</dd>
+              </div>
+              <div class="total-row">
+                <dt>Total</dt>
+                <dd id="cart-total">$0.00</dd>
+              </div>
+            </dl>
+            <p class="demo-note">Prices in USD. Shipping and tax are not included.</p>
+            <form id="promo-form" class="promo-form">
+              <label for="promo-code">Your invitation code</label>
+              <div class="input-button-row">
+                <input
+                  id="promo-code"
+                  type="text"
+                  maxlength="30"
+                  placeholder="FIRSTSIP"
+                  aria-describedby="promo-status"
+                  autocomplete="off"
+                ><button class="button button-small" type="submit">Apply</button>
+              </div>
+              <p id="promo-status" class="field-error" role="status"></p>
+            </form>
+            <button id="review-order" class="button full-width" type="button">
+              Review your selection <span aria-hidden="true">↗</span>
+            </button>
+            <p class="demo-note">
+              Online checkout is not yet available. You can review your bag here.
+            </p>
+          </aside>
+        </div>
+        <p class="privacy-note">
+          Your bag and offer preference are saved on this browser only. Signup emails and names are
+          never saved. If browser storage is blocked, your bag may not carry across pages.
+        </p>
+        <noscript
+          ><p class="storage-notice">
+            Please enable JavaScript to view your bag, adjust quantities, and review your selection.
+          </p></noscript
+        >
+      </section>
+      <dialog
+        id="checkout-dialog"
+        aria-labelledby="checkout-title"
+        aria-describedby="checkout-description"
+      >
+        <button
+          id="close-checkout"
+          class="dialog-close round-button"
+          type="button"
+          aria-label="Close order review"
+        >
+          ×
+        </button>
+        <p class="eyebrow">Review your selection</p>
+        <h2 id="checkout-title">Your selection</h2>
+        <p id="checkout-description">
+          Review your items and totals below. Finishing this review clears your bag; it does not
+          place an order or take payment.
+        </p>
+        <ul id="review-items" class="review-items"></ul>
+        <p class="review-total">Total: <strong id="review-total"></strong></p>
+        <button id="confirm-order" class="button full-width" type="button">
+          Finish review &amp; clear bag
+        </button>
+        <p class="demo-note">No address, card details, or bank information is collected.</p>
+      </dialog>
+    </main>
+    <p class="container image-credit">
+      Photography and original artwork.
+      <a href="ImageCredits.html">Image credits &amp; licenses</a>
+    </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+            <span>Roast House<small>Coffee, beautifully considered.</small></span>
+          </a>
+          <p>Exceptional coffee. An everyday art.</p>
+        </div>
+        <div>
+          <h2>The collections</h2>
+          <a href="CoffeeSelection.html">Our coffee</a><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="ShoppingCart.html">Your bag</a>
+        </div>
+        <div>
+          <h2>The house</h2>
+          <a href="EventsAndWorkshops.html">Events &amp; workshops</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a href="index.html#our-story">Our philosophy</a
+          ><a href="index.html#find-us">Find us in Yangon</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Roast House · Woman-owned and independently run.</p>
+        <p>Good beans. Thoughtful brewing. All prices in USD.</p>
+      </div>
+    </footer>
+  </body>
+</html>

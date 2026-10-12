@@ -1,0 +1,444 @@
+<!doctype html>
+<!-- Roast House home: a simple coffee shop, its woman owner Bea, and a welcome offer. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Meet Roast House, Yoon's woman-owned coffee shop. Discover good beans, simple brewing tools, and a friendly place to share a cup."
+    >
+    <title>Roast House | Good Coffee, Made Personal</title>
+    <link rel="icon" type="image/jpeg" href="image/roast-house-logo.jpg">
+    <link rel="stylesheet" href="style.css" >
+    <script src="jsscript/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="announcement-bar">
+      Welcome to Yoon’s coffee shop · Enjoy 10% off with <strong>FIRSTSIP</strong>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Roast House home">
+          <img class="brand-mark" src="image/roast-house-logo.jpg" alt="Roast House Coffee Logo" width="42" height="42" >
+          <span>Roast House<small>Coffee, beautifully considered.</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a
+          ><a href="CoffeeSelection.html">Our coffee</a
+          ><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="EventsAndWorkshops.html">Gather with us</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a class="bag-link" href="ShoppingCart.html"
+            >Bag <span class="bag-count" data-cart-count>0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Good beans. A personal touch.</p>
+          <h1 id="hero-title">Good coffee.<br><em>A little care.</em></h1>
+          <p class="hero-description">
+            Your favourite cup starts here. Discover lovely beans,<br class="desktop-break" >
+            easy brewing tools, and a slower kind of morning.<br class="desktop-break" >
+            Selected and shared by Yoon.
+          </p>
+          <div class="button-row">
+            <a class="button" href="CoffeeSelection.html"
+              >Shop our coffee <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#our-story">Meet Yoon, the owner</a>
+          </div>
+          <div class="hero-footnote">
+            <img
+              src="image/owner.jpg"
+              alt="Illustration of Bea, our woman owner"
+              width="52"
+              height="52"
+            ><span
+              ><strong>A small, woman-owned coffee shop.</strong><br>Made personal by Yoon.</span
+            >
+          </div>
+        </div>
+        <div class="hero-art">
+          <img
+          class="hero-photo"
+          src="image/coffee-beans-shop.jpg"
+          alt="Illustration of latte art, coffee beans, and a Roast House bag on an ivory table"
+          width="1000"
+          height="1100"
+          fetchpriority="high"
+          >
+        </div>
+      </section>
+      <section class="values-strip" aria-label="Our coffee philosophy">
+        <div class="container">
+          <span>Thoughtfully selected</span><span aria-hidden="true">✧</span
+          ><span>Roasted with care</span><span aria-hidden="true">✧</span
+          ><span>Made for your mornings</span><span aria-hidden="true">✧</span
+          ><span>Always a little personal</span>
+        </div>
+      </section>
+      <section class="container section" aria-labelledby="discovery-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your everyday essentials</p>
+            <h2 id="discovery-title">Simple things. Better mornings.</h2>
+          </div>
+          <p>Good coffee and the tools to make it your way.</p>
+        </div>
+        <div class="discovery-grid">
+          <a class="discovery-card" href="CoffeeSelection.html"
+            ><img
+              src="image/all-beans.jpg"
+              alt="Richly roasted coffee beans"
+              width="700"
+              height="520"
+              loading="lazy"
+            >
+            <div>
+              <span class="eyebrow">01 / The coffee collection</span>
+              <h3>Distinctive origins. Lasting impressions. <span aria-hidden="true">↗</span></h3>
+              <p>Explore character, complexity, and a cup that is unmistakably yours.</p>
+            </div></a
+          >
+          <a class="discovery-card" href="BrewingEquipment.html"
+            ><img
+              src="image/brewing-equipment.jpg" 
+              alt="Equipment for a slow pour-over coffee ritual" 
+              width="700" height="520" 
+              loading="lazy"
+            >
+            <div>
+              <span class="eyebrow">02 / The brewing collection</span>
+              <h3>Objects for a considered ritual. <span aria-hidden="true">↗</span></h3>
+              <p>Purposeful tools for the pleasure of making something well.</p>
+            </div></a
+          >
+        </div>
+      </section>
+      <section class="rose-section section" aria-labelledby="favourites-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected by our founder</p>
+              <h2 id="favourites-title">The signature collection</h2>
+            </div>
+            <a class="text-link" href="CoffeeSelection.html"
+              >View all coffees <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div
+            class="featured-slider"
+            data-slideshow
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Featured coffees"
+          >
+            <article
+             class="featured-coffee"
+             data-slide
+             aria-label="1 of 3: Morning Bloom"
+            >
+              <img
+                src="image/beans1.jpg"
+                alt="Roasted coffee beans, illustrating Morning Bloom"
+                width="700"
+                height="560"
+                loading="lazy"
+              >
+              <div>
+                <span class="pill">The everyday favourite</span>
+                <p class="eyebrow">Colombia · Medium roast · 250 g</p>
+                <h3>Morning Bloom</h3>
+                <p class="flavour-line">Milk chocolate. Caramel. A little sunshine.</p>
+                <p>
+                  Soft, sweet and endlessly comforting. The kind of coffee that makes getting out of
+                  bed feel like a good idea.
+                </p>
+                <p class="price">$16.50 <span>/ 250 g</span></p>
+                <button class="button" data-add-product="morning-bloom" type="button" disabled>
+                  Add Morning Bloom to bag <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </article>
+            <article
+            class="featured-coffee"
+            data-slide
+            aria-label="2 of 3: Rose Cloud"
+            hidden
+            >
+              <img
+                src="image/beans2.jpg"
+                alt="A freshly made cup, illustrating Rose Cloud"
+                width="700"
+                height="560"
+                loading="lazy"
+              >
+              <div>
+                <span class="pill">For the floral-hearted</span>
+                <p class="eyebrow">Ethiopia · Light roast · 250 g</p>
+                <h3>Rose Cloud</h3>
+                <p class="flavour-line">Bergamot. Peach. Jasmine daydreams.</p>
+                <p>
+                  A delicate, tea-like cup for mornings that deserve a little extra attention.
+                  Beautiful brewed slowly.
+                </p>
+                <p class="price">$19.00 <span>/ 250 g</span></p>
+                <button class="button" data-add-product="rose-cloud" type="button" disabled>
+                  Add Rose Cloud to bag <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </article>
+            <article
+              class="featured-coffee"
+              data-slide
+              aria-label="3 of 3: Velvet Moon"
+              hidden
+            >
+              <img
+                src="image/beans3.jpg"
+                alt="Coffee beans, illustrating Velvet Moon"
+                width="700"
+                height="560"
+                loading="lazy"
+              >
+              <div>
+                <span class="pill">An espresso little love</span>
+                <p class="eyebrow">Brazil · Dark roast · 250 g</p>
+                <h3>Velvet Moon</h3>
+                <p class="flavour-line">Dark chocolate. Hazelnut. Cozy evenings.</p>
+                <p>
+                  Rich and rounded, with a deliciously lingering finish. Add your favourite milk and
+                  settle right in.
+                </p>
+                <p class="price">$15.50 <span>/ 250 g</span></p>
+                <button class="button" data-add-product="velvet-moon" type="button" disabled>
+                  Add Velvet Moon to bag <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </article>
+            <div class="slider-controls" hidden>
+              <button
+                class="round-button"
+                type="button"
+                data-previous
+                aria-label="Previous featured coffee"
+              >
+                ←</button
+              ><span data-slide-status role="status" aria-live="polite">1 / 3</span
+              ><button
+                class="round-button"
+                type="button"
+                data-next
+                aria-label="Next featured coffee"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="our-story" class="container section story-section" aria-labelledby="story-title">
+        <div
+          class="moments-slider"
+          data-slideshow
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Coffee moments"
+        >
+        <figure data-slide aria-label="1 of 2: Shared coffee moments">
+          <img
+          src="image/coffee-beans-workshop.jpg"
+          alt="People gathered at tables in a café"
+          width="800"
+          height="900"
+          loading="lazy"
+          >
+          <figcaption>Better coffee. Even better company.</figcaption>
+          </figure> 
+          <figure data-slide aria-label="2 of 2: A quiet coffee moment" hidden> 
+            <img src="image/coffee-workshop.jpg" 
+            alt="A girl teaching how to make coffee" 
+            width="800" height="900" 
+            loading="lazy"
+            > 
+            <figcaption>A moment just for you.</figcaption> 
+          </figure>
+          <div class="slider-controls" hidden>
+            <button
+              class="round-button"
+              type="button"
+              data-previous
+              aria-label="Previous coffee moment"
+            >
+              ←</button
+            ><span data-slide-status role="status" aria-live="polite">1 / 2</span
+            ><button class="round-button" type="button" data-next aria-label="Next coffee moment">
+              →
+            </button>
+          </div>
+        </div>
+        <div class="story-copy">
+          <img
+            class="owner-portrait"
+            src="image/Owner.jpg"
+            alt="Yoon, the woman owner, illustrated holding a coffee cup"
+            width="100"
+            height="100"
+            loading="lazy"
+          >
+          <p class="eyebrow">Meet the woman behind the beans</p>
+          <h2 id="story-title">Hi, I’m Yoon.<br>Welcome to my little shop.</h2>
+          <p>
+            I’m the woman owner of Roast House. I started this shop with a love of good coffee and
+            a simple idea: everyone deserves a moment that feels like their own.
+          </p>
+          <p>
+            I choose the beans, share the brewing tips, and bring people together over a cup.
+            Whether youre trying your first pour-over or finding a new favourite, Im glad youre
+            here.
+          </p>
+          <p class="signature">With love, Yoon</p>
+          <p class="demo-note">
+            Independently owned by Yoon. Coffee chosen with care, and a warm welcome in every cup.
+          </p>
+          <a class="text-link" href="EventsAndWorkshops.html"
+            >Join us for a workshop <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="container section welcome-banner" aria-labelledby="welcome-banner-title">
+        <div>
+          <p class="eyebrow">An invitation to Roast House</p>
+          <h2 id="welcome-banner-title">Your first discovery, our welcome.</h2>
+          <p>Discover your welcome offer and receive 10% off your first collection.</p>
+        </div>
+        <button id="open-welcome" class="button" type="button" disabled>
+          Receive your invitation <span aria-hidden="true">↗</span>
+        </button>
+      </section>
+      <section
+        id="find-us"
+        class="container section location-section"
+        aria-labelledby="location-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Our city</p>
+            <h2 id="location-title">Roast House in Yangon.</h2>
+          </div>
+          <a
+            class="text-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%2C%20Myanmar"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Open in Google Maps <span aria-hidden="true">&#8599;</span></a
+          >
+        </div>
+        <p class="muted">
+          Map centred on Yangon, Myanmar; an exact shop address is not shown.
+        </p>
+        <iframe
+          title="Map of Yangon, Myanmar"
+          src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sYangon,+Myanmar!6i12"
+          width="1180"
+          height="420"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <noscript
+        ><p class="container storage-notice">
+          JavaScript is needed for the bag, slideshows, and welcome offer. You can still explore all
+          six pages using the navigation.
+        </p></noscript
+      >
+    </main>
+    <p class="container image-credit">
+      Photography and original artwork.
+      <a href="ImageCredits.html">Image credits &amp; licenses</a>
+    </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <img class="brand-mark" src="image/roast-house-logo.jpg" alt="Roast House Coffee Logo" width="42" height="42" >
+            <span>Roast House<small>Coffee, beautifully considered.</small></span>
+          </a>
+          <p>Exceptional coffee. An everyday art.</p>
+        </div>
+        <div>
+          <h2>The collections</h2>
+          <a href="CoffeeSelection.html">Our coffee</a><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="ShoppingCart.html">Your bag</a>
+        </div>
+        <div>
+          <h2>The house</h2>
+          <a href="EventsAndWorkshops.html">Events &amp; workshops</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a href="index.html#our-story">Our philosophy</a
+          ><a href="index.html#find-us">Find us in Yangon</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Roast House · Woman-owned and independently run.</p>
+        <p>Good beans. Thoughtful brewing. All prices in USD.</p>
+      </div>
+    </footer>
+    <dialog
+      id="welcome-dialog"
+      aria-labelledby="dialog-title"
+      aria-describedby="dialog-description"
+    >
+      <button
+        id="close-welcome"
+        class="dialog-close round-button"
+        type="button"
+        aria-label="Close welcome offer"
+      >
+        &times;
+      </button>
+      <img class="dialog-logo" src="image/roast-house-logo.jpg" alt="Roast House Coffee Logo" width="64" height="64" >
+      <p class="eyebrow">A personal invitation</p>
+      <h2 id="dialog-title">Your introduction<br>to the exceptional.</h2>
+      <p id="dialog-description">
+        Enjoy 10% off your first collection. Enter your email to reveal your welcome code.
+      </p>
+      <form id="welcome-form" class="signup-form">
+        <div class="form-field">
+          <label for="welcome-email">Email address</label
+          ><input
+            id="welcome-email"
+            type="email"
+            autocomplete="email"
+            required
+            maxlength="254"
+            placeholder="you@example.com"
+            aria-describedby="welcome-error welcome-privacy"
+          >
+          <p id="welcome-error" class="field-error" aria-live="polite"></p>
+        </div>
+        <button class="button" type="submit" disabled>
+          Reveal your welcome code <span aria-hidden="true">↗</span>
+        </button>
+        <p id="welcome-privacy" class="demo-note">
+          Your email is used only to check this form. It is not sent or stored.
+        </p>
+      </form>
+      <p id="welcome-success" class="status-message" role="status" hidden></p>
+    </dialog>
+  </body>
+</html>

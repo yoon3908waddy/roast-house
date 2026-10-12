@@ -1,0 +1,176 @@
+<!doctype html>
+<!-- Brewing-equipment catalogue with searchable descriptions, usage tips, and bag controls. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Build your happy little coffee corner with Roast House's brewing equipment and easy-to-follow usage tips."
+    >
+    <title>Brew Tools | Roast House</title>
+    <link rel="icon" type="image/jpeg" href="image/roast-house-logo.jpg" >
+    <link rel="stylesheet" href="style.css" >
+    <script src="jsscript/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="announcement-bar">
+      Purposeful design. Exceptional results. <span aria-hidden="true">—</span> The brewing
+      collection.
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Roast House home">
+          <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+          <span>Roast House<small>Coffee, beautifully considered.</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="CoffeeSelection.html">Our coffee</a
+          ><a href="BrewingEquipment.html" aria-current="page">Brew tools</a
+          ><a href="EventsAndWorkshops.html">Gather with us</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a class="bag-link" href="ShoppingCart.html"
+            >Bag <span class="bag-count" data-cart-count>0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" data-catalogue="equipment">
+      <section class="hero container page-hero" aria-labelledby="equipment-hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Objects with purpose</p>
+          <h1 id="equipment-hero-title">The art of <em>brewing.</em></h1>
+          <p class="hero-description">
+            Considered equipment for a more rewarding ritual. Precision, simplicity, and the
+            pleasure of making coffee well.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#equipment-catalogue"
+              >Explore brewing tools <span aria-hidden="true">&#8595;</span></a
+            >
+            <a class="text-link" href="EventsAndWorkshops.html"
+              >Explore workshops <span aria-hidden="true">&#8599;</span></a
+            >
+          </div>
+          <ul class="page-hero-facts" aria-label="Equipment details">
+            <li>Home brewing</li>
+            <li>Practical tips</li>
+            <li>Prices in USD</li>
+          </ul>
+        </div>
+        <figure class="page-hero-visual">
+          <img
+            class="page-hero-photo"
+            src="image/all-beans.jpg"
+            alt="Pour-over coffee equipment with a glass brewer, scale, and gooseneck kettle"
+            width="1280"
+            height="817"
+            fetchpriority="high"
+          >
+          <img
+            class="page-hero-detail"
+            src="image/how-to-make.jpg"
+            alt="A wooden hand coffee grinder surrounded by roasted beans"
+            width="1280"
+            height="1280"
+            decoding="async"
+          >
+          <figcaption class="page-hero-caption">
+            <span>A more mindful brew</span>
+            <strong>Make every cup your own.</strong>
+          </figcaption>
+        </figure>
+      </section>
+      <section
+        id="equipment-catalogue"
+        class="container catalogue-section"
+        aria-label="Shop brewing equipment"
+        tabindex="-1"
+      >
+        <div class="catalogue-toolbar">
+          <div class="search-field">
+            <label for="product-search">Find your brewing companion</label>
+            <div class="search-input-wrap">
+              <span aria-hidden="true">⌕</span
+              ><input
+                id="product-search"
+                type="search"
+                placeholder="Try espresso, grinder, French press…"
+                aria-controls="product-grid"
+                disabled
+              ><button id="clear-search" type="button" hidden>Clear</button>
+            </div>
+          </div>
+          <p id="result-count" role="status" aria-live="polite"></p>
+        </div>
+        <div id="product-grid" class="product-grid equipment-grid"></div>
+        <div id="no-results" class="empty-state" hidden>
+          <h2>No brewing tools found.</h2>
+          <p>Try a simpler search, like “press” or “grinder”, or clear your search.</p>
+        </div>
+        <noscript
+          ><p class="storage-notice">
+            Enable JavaScript for search, detailed tips, and your bag. Explore our Petal Pour-over
+            Set ($32.00), Little Barista Machine ($249.00), Slow Sunday Press ($28.50), and Daily
+            Ritual Grinder ($58.00).
+          </p></noscript
+        >
+      </section>
+      <section class="container section brew-note">
+        <span class="bean-icon" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Discover the details</p>
+          <h2>Good equipment. Deeper understanding.</h2>
+          <p>
+            Join a brewing workshop to explore grind size, extraction, and a more considered
+            approach to your daily cup. Always follow your equipment’s safety and care instructions.
+          </p>
+          <a class="text-link" href="EventsAndWorkshops.html"
+            >Explore our workshops <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <p class="container image-credit">
+      Photography and original artwork.
+      <a href="ImageCredits.html">Image credits &amp; licenses</a>
+    </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+            <span>Roast House<small>Coffee, beautifully considered.</small></span>
+          </a>
+          <p>Exceptional coffee. An everyday art.</p>
+        </div>
+        <div>
+          <h2>The collections</h2>
+          <a href="CoffeeSelection.html">Our coffee</a><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="ShoppingCart.html">Your bag</a>
+        </div>
+        <div>
+          <h2>The house</h2>
+          <a href="EventsAndWorkshops.html">Events &amp; workshops</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a href="index.html#our-story">Our philosophy</a
+          ><a href="index.html#find-us">Find us in Yangon</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Roast House · Woman-owned and independently run.</p>
+        <p>Good beans. Thoughtful brewing. All prices in USD.</p>
+      </div>
+    </footer>
+  </body>
+</html>

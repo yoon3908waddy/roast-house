@@ -1,0 +1,191 @@
+<!doctype html>
+<!-- Searchable coffee catalogue with aroma, tasting notes, and brewing recommendations. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta
+      name="description"
+      content="Find your favourite coffee at Roast House: floral, chocolatey, mellow, or decaf. Explore tasting notes and brewing tips."
+    >
+    <title>Our Coffee | Roast House</title>
+    <link rel="icon" type="image/jpeg" href="image/roast-house-logo.jpg" >
+    <link rel="stylesheet" href="style.css" >
+    <script src="jsscript/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="announcement-bar">
+      An introduction to exceptional coffee · 10% off with <strong>FIRSTSIP</strong>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Roast House home">
+          <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+          <span>Roast House<small>Coffee, beautifully considered.</small></span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a
+          ><a href="CoffeeSelection.html" aria-current="page">Our coffee</a
+          ><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="EventsAndWorkshops.html">Gather with us</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a class="bag-link" href="ShoppingCart.html"
+            >Bag <span class="bag-count" data-cart-count>0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" data-catalogue="coffee">
+      <section class="hero container page-hero" aria-labelledby="coffee-hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Origin. Craft. Character.</p>
+          <h1 id="coffee-hero-title">The <em>coffee collection.</em></h1>
+          <p class="hero-description">
+            A considered selection of distinctive origins. From bright, floral notes to rich,
+            chocolatey favourites, discover your signature cup.
+          </p>
+          <div class="button-row">
+            <a class="button" href="#coffee-catalogue"
+              >Explore the collection <span aria-hidden="true">&#8595;</span></a
+            >
+            <a class="text-link" href="BrewingEquipment.html"
+              >Find your brew tools <span aria-hidden="true">&#8599;</span></a
+            >
+          </div>
+          <ul class="page-hero-facts" aria-label="Collection details">
+            <li>Whole beans</li>
+            <li>250 g bags</li>
+            <li>Prices in USD</li>
+          </ul>
+        </div>
+        <figure class="page-hero-visual">
+          <img
+            class="page-hero-photo"
+            src="image/cup.jpg"
+            alt="Black coffee in a white cup and saucer"
+            width="1600"
+            height="1200"
+            fetchpriority="high"
+          >
+          <img
+            class="page-hero-detail"
+            src="image/coffee-beans.jpg"
+            alt="A close-up of roasted whole coffee beans"
+            width="1600"
+            height="1200"
+            decoding="async"
+          >
+          <figcaption class="page-hero-caption">
+            <span>From bean to cup</span>
+            <strong>A cup for every mood.</strong>
+          </figcaption>
+        </figure>
+      </section>
+      <section
+        id="coffee-catalogue"
+        class="container catalogue-section"
+        aria-label="Shop coffee"
+        tabindex="-1"
+      >
+        <div class="catalogue-toolbar">
+          <div class="search-field">
+            <label for="product-search">Find your beans</label>
+            <div class="search-input-wrap">
+              <span aria-hidden="true">⌕</span
+              ><input
+                id="product-search"
+                type="search"
+                placeholder="Try chocolate, light roast, Colombia…"
+                aria-controls="product-grid"
+                disabled
+              ><button id="clear-search" type="button" hidden>Clear</button>
+            </div>
+          </div>
+          <p id="result-count" role="status" aria-live="polite"></p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter by roast">
+          <button type="button" data-filter="all" aria-pressed="true" disabled>All our beans</button
+          ><button type="button" data-filter="Light roast" aria-pressed="false" disabled>
+            Light &amp; bright</button
+          ><button type="button" data-filter="Medium roast" aria-pressed="false" disabled>
+            Sweet &amp; balanced</button
+          ><button type="button" data-filter="Dark roast" aria-pressed="false" disabled>
+            Bold &amp; cozy</button
+          ><button type="button" data-filter="decaf" aria-pressed="false" disabled>
+            Lovely decaf
+          </button>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+        <div id="no-results" class="empty-state" hidden>
+          <h2>No beans found, just yet.</h2>
+          <p>
+            Try a different flavour, origin, or roast. Choose “All our beans” to remove the roast
+            filter.
+          </p>
+        </div>
+        <noscript
+          ><p class="storage-notice">
+            Enable JavaScript to search products and use your bag. Our coffees include Morning Bloom
+            ($16.50), Rose Cloud ($19.00), Velvet Moon ($15.50), Honey Hug ($18.00), Forest Day
+            ($17.50), and Quiet Hours Decaf ($17.00), each in a 250 g bag.
+          </p></noscript
+        >
+      </section>
+      <section class="container section brew-note">
+        <span class="bean-icon" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">A matter of craft</p>
+          <h2>Freshly ground. Slowly savoured.</h2>
+          <p>
+            Start with 15 g of coffee for 250 ml of water. Grind just before brewing, adjust to your
+            taste, and give the process the attention it deserves.
+          </p>
+          <a class="text-link" href="BrewingEquipment.html"
+            >Explore the brewing collection <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <p class="container image-credit">
+      Photography and original artwork.
+      <a href="ImageCredits.html">Image credits &amp; licenses</a>
+    </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <img class="brand-mark" src="image/roast-house-logo.jpg" alt="" width="42" height="42" >
+            <span>Roast House<small>Coffee, beautifully considered.</small></span>
+          </a>
+          <p>Exceptional coffee. An everyday art.</p>
+        </div>
+        <div>
+          <h2>The collections</h2>
+          <a href="CoffeeSelection.html">Our coffee</a><a href="BrewingEquipment.html">Brew tools</a
+          ><a href="ShoppingCart.html">Your bag</a>
+        </div>
+        <div>
+          <h2>The house</h2>
+          <a href="EventsAndWorkshops.html">Events &amp; workshops</a
+          ><a href="SpecialOffersAndSubscription.html">Offers &amp; subscriptions</a
+          ><a href="index.html#our-story">Our philosophy</a
+          ><a href="index.html#find-us">Find us in Yangon</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 Roast House · Woman-owned and independently run.</p>
+        <p>Good beans. Thoughtful brewing. All prices in USD.</p>
+      </div>
+    </footer>
+  </body>
+</html>
